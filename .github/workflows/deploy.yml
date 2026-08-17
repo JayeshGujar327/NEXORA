@@ -5,20 +5,25 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
+
   build:
+    environment: github-pages
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -30,6 +35,22 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Check Firebase environment
+        env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+          VITE_AUTH_DOMAIN: ${{ secrets.VITE_AUTH_DOMAIN }}
+          VITE_PROJECT_ID: ${{ secrets.VITE_PROJECT_ID }}
+          VITE_STORAGE_BUCKET: ${{ secrets.VITE_STORAGE_BUCKET }}
+          VITE_MESSAGING_SENDER_ID: ${{ secrets.VITE_MESSAGING_SENDER_ID }}
+          VITE_APP_ID: ${{ secrets.VITE_APP_ID }}
+        run: |
+          if [ -z "$VITE_API_KEY" ]; then echo "❌ VITE_API_KEY missing"; exit 1; else echo "✅ VITE_API_KEY found"; fi
+          if [ -z "$VITE_AUTH_DOMAIN" ]; then echo "❌ VITE_AUTH_DOMAIN missing"; exit 1; else echo "✅ VITE_AUTH_DOMAIN found"; fi
+          if [ -z "$VITE_PROJECT_ID" ]; then echo "❌ VITE_PROJECT_ID missing"; exit 1; else echo "✅ VITE_PROJECT_ID found"; fi
+          if [ -z "$VITE_STORAGE_BUCKET" ]; then echo "❌ VITE_STORAGE_BUCKET missing"; exit 1; else echo "✅ VITE_STORAGE_BUCKET found"; fi
+          if [ -z "$VITE_MESSAGING_SENDER_ID" ]; then echo "❌ VITE_MESSAGING_SENDER_ID missing"; exit 1; else echo "✅ VITE_MESSAGING_SENDER_ID found"; fi
+          if [ -z "$VITE_APP_ID" ]; then echo "❌ VITE_APP_ID missing"; exit 1; else echo "✅ VITE_APP_ID found"; fi
 
       - name: Build NEXORA
         env:
@@ -49,7 +70,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist"
+          path: ./dist
 
   deploy:
     environment:
@@ -61,6 +82,7 @@ jobs:
     needs: build
 
     steps:
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
