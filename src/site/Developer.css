@@ -1,0 +1,665 @@
+/* =========================================
+   NEXORA — DEVELOPER / CREATOR SECTION
+   ========================================= */
+
+.developer-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 7%;
+  overflow: hidden;
+
+  background: #4b9cf5;
+  color: #071a52;
+}
+
+/* =========================================
+   BACKGROUND GLOW
+   ========================================= */
+
+.developer-glow {
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.25;
+
+  pointer-events: none;
+}
+
+.glow-one {
+  top: -180px;
+  left: -120px;
+
+  background: #ffd000;
+}
+
+.glow-two {
+  right: -100px;
+  bottom: -200px;
+
+  background: #102c78;
+}
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.developer-container {
+  position: relative;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+/* =========================================
+   SECTION LABEL
+   ========================================= */
+
+.developer-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+
+  color: #ffd000;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+.label-line {
+  width: 45px;
+  height: 3px;
+
+  background: #ffd000;
+
+  border-radius: 10px;
+}
+
+/* =========================================
+   MAIN DEVELOPER CARD
+   ========================================= */
+
+.developer-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 500px;
+
+  padding: 65px;
+
+  border: 2px solid rgba(7, 26, 82, 0.8);
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(7, 26, 82, 0.2),
+    inset 0 0 40px rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(15px);
+
+  transition: 0.4s ease;
+}
+
+.developer-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 35px 90px rgba(7, 26, 82, 0.28),
+    0 0 45px rgba(255, 208, 0, 0.15);
+}
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.developer-content {
+  max-width: 650px;
+
+  z-index: 3;
+}
+
+/* =========================================
+   BADGE
+   ========================================= */
+
+.developer-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 16px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid rgba(255, 208, 0, 0.7);
+
+  border-radius: 30px;
+
+  background: rgba(255, 208, 0, 0.12);
+
+  color: #ffd000;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.developer-badge span {
+  font-size: 16px;
+}
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.developer-content h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 70px);
+
+  line-height: 0.98;
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+}
+
+.developer-content h2 span {
+  color: #ffd000;
+}
+
+/* =========================================
+   ROLE
+   ========================================= */
+
+.developer-role {
+  margin-top: 22px;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.developer-description {
+  max-width: 600px;
+
+  margin-top: 20px;
+
+  color: rgba(7, 26, 82, 0.9);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.developer-description strong {
+  color: #071a52;
+}
+
+.developer-description.secondary {
+  margin-top: 8px;
+}
+
+/* =========================================
+   ACTION BUTTONS
+   ========================================= */
+
+.developer-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.developer-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 18px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  transition: all 0.3s ease;
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.developer-btn:hover .arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   GITHUB BUTTON
+   ========================================= */
+
+.github-btn {
+  background: #071a52;
+
+  color: white;
+
+  border: 2px solid #071a52;
+}
+
+.github-btn:hover {
+  background: transparent;
+
+  color: #071a52;
+
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   EMAIL BUTTON
+   ========================================= */
+
+.email-btn {
+  background: #ffd000;
+
+  color: #071a52;
+
+  border: 2px solid #ffd000;
+}
+
+.email-btn:hover {
+  background: #ffe36a;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 25px rgba(255, 208, 0, 0.35);
+}
+
+/* =========================================
+   FEATURE BUTTON
+   ========================================= */
+
+.feature-btn {
+  background: transparent;
+
+  color: #071a52;
+
+  border: 2px solid #071a52;
+}
+
+.feature-btn:hover {
+  background: #071a52;
+
+  color: white;
+
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   CREATOR VISUAL
+   ========================================= */
+
+.developer-visual {
+  position: relative;
+
+  width: 390px;
+  height: 390px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   ORBIT
+   ========================================= */
+
+.orbit {
+  position: absolute;
+
+  border: 1px dashed rgba(7, 26, 82, 0.5);
+
+  border-radius: 50%;
+
+  animation:
+    rotateOrbit 12s linear infinite;
+}
+
+.orbit-one {
+  width: 280px;
+  height: 280px;
+}
+
+.orbit-two {
+  width: 360px;
+  height: 360px;
+
+  animation-direction: reverse;
+
+  animation-duration: 18s;
+}
+
+/* =========================================
+   CREATOR CIRCLE
+   ========================================= */
+
+.creator-circle {
+  position: relative;
+
+  width: 210px;
+  height: 210px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #071a52;
+
+  border: 7px solid #ffd000;
+
+  box-shadow:
+    0 0 0 15px rgba(255, 208, 0, 0.08),
+    0 0 70px rgba(7, 26, 82, 0.35);
+
+  animation:
+    creatorFloat 4s ease-in-out infinite;
+
+  z-index: 4;
+}
+
+/* =========================================
+   INITIAL
+   ========================================= */
+
+.creator-initial {
+  color: #ffd000;
+
+  font-size: 48px;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+}
+
+/* =========================================
+   DECORATIVE DOTS
+   ========================================= */
+
+.creator-dot {
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  background: #ffd000;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px #ffd000;
+}
+
+.dot-one {
+  top: 20px;
+  right: 60px;
+}
+
+.dot-two {
+  bottom: 35px;
+  left: 35px;
+}
+
+.dot-three {
+  top: 90px;
+  left: 15px;
+}
+
+/* =========================================
+   FLOATING CARDS
+   ========================================= */
+
+.floating-card {
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  border-radius: 12px;
+
+  background: #071a52;
+
+  color: white;
+
+  border: 2px solid #ffd000;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 12px 30px rgba(7, 26, 82, 0.3);
+
+  z-index: 5;
+
+  animation:
+    cardFloat 4s ease-in-out infinite;
+}
+
+.floating-card span {
+  color: #ffd000;
+}
+
+.card-top {
+  top: 45px;
+  right: 5px;
+}
+
+.card-bottom {
+  bottom: 45px;
+  left: 5px;
+
+  animation-delay: 1s;
+}
+
+/* =========================================
+   QUOTE
+   ========================================= */
+
+.developer-quote {
+  text-align: center;
+
+  margin-top: 40px;
+
+  color: rgba(7, 26, 82, 0.75);
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  font-weight: 600;
+}
+
+.developer-quote span {
+  color: #ffd000;
+
+  font-size: 28px;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes creatorFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .developer-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 45px 30px;
+  }
+
+  .developer-content {
+    max-width: 700px;
+  }
+
+  .developer-actions {
+    justify-content: center;
+  }
+
+  .developer-visual {
+    margin-top: 50px;
+
+    width: 320px;
+    height: 320px;
+  }
+
+  .creator-circle {
+    width: 170px;
+    height: 170px;
+  }
+
+  .creator-initial {
+    font-size: 38px;
+  }
+
+  .orbit-one {
+    width: 230px;
+    height: 230px;
+  }
+
+  .orbit-two {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 550px) {
+  .developer-section {
+    padding: 75px 5%;
+  }
+
+  .developer-card {
+    padding: 35px 20px;
+
+    border-radius: 22px;
+  }
+
+  .developer-content h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .developer-description {
+    font-size: 14px;
+  }
+
+  .developer-actions {
+    flex-direction: column;
+  }
+
+  .developer-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .developer-visual {
+    transform: scale(0.85);
+
+    margin-top: 25px;
+  }
+}
