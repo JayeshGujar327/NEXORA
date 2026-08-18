@@ -1,4 +1,4 @@
-import "./utility/testEmail";
+
 import React, { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "./style/index.css";
