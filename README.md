@@ -15,7 +15,7 @@
 
 <p align="center">
   🌐 <strong>Live Demo:</strong>
-  <a href="[https://jayeshgujar327.github.io/NEXORA/](https://nexora327.netlify.app/)">
+  <a href="(https://nexora327.netlify.app/)">
     NEXORA
   </a>
 </p>
